@@ -56,12 +56,12 @@ export default function Page() {
       <main>
         <section className="bg-[#FDFBF7]">
           <div className="mx-auto container max-w-3xl pt-[140px] pb-12 text-center md:pt-[170px] md:pb-16">
-            <p className="font-body text-[14px] font-semibold leading-[140%] text-[#FFAA02] md:text-[16px]">
+            {/* <p className="font-body text-[14px] font-semibold leading-[140%] text-[#FFAA02] md:text-[16px]">
               LEGAL &amp; INFORMATION
             </p>
             <h1 className="mt-2 font-poppins text-[28px] font-bold leading-[120%] text-[#1C2A38] md:text-[40px]">
               Privacy &amp; Terms
-            </h1>
+            </h1> */}
             <p className="mx-auto mt-4 max-w-2xl font-body text-[16px] leading-[160%] text-[#5B5C61] md:text-[18px]">
               Clear information about how Cairde Concierge handles personal
               data and the terms that apply when you use our website and

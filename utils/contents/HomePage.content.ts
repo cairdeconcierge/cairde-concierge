@@ -10,7 +10,7 @@ export const navLinks = [
     router: ServicesPage,
   },
   {
-    title: "Corporate ElderSupport",
+    title: "Corporate Elder Support",
     router: "/corporate-eldercare",
   },
   {
