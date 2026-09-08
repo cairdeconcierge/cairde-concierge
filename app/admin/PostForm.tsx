@@ -233,16 +233,6 @@ export default function PostForm({ action, post }: Props) {
       </div>
 
       <div>
-        <label className={labelClasses}>Meta description</label>
-        <textarea
-          name="meta_description"
-          rows={2}
-          defaultValue={post?.meta_description}
-          className={`${inputClasses} h-auto py-[10px]`}
-        />
-      </div>
-
-      <div>
         <label className={labelClasses}>Keywords (comma separated)</label>
         <input
           name="keywords"

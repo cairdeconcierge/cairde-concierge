@@ -27,17 +27,18 @@ function postPayloadFromForm(formData: FormData) {
     .split(",")
     .map((k) => k.trim())
     .filter(Boolean);
+  const excerpt = String(formData.get("excerpt") ?? "").trim();
 
   return {
     slug: String(formData.get("slug") ?? "").trim(),
     title: String(formData.get("title") ?? "").trim(),
-    excerpt: String(formData.get("excerpt") ?? "").trim(),
+    excerpt,
     image_url: String(formData.get("image_url") ?? "").trim(),
     alt_text: String(formData.get("alt_text") ?? "").trim(),
     author: String(formData.get("author") ?? "Cairde Concierge").trim(),
     published_at: new Date(String(formData.get("published_at"))).toISOString(),
     read_time: String(formData.get("read_time") ?? "").trim(),
-    meta_description: String(formData.get("meta_description") ?? "").trim(),
+    meta_description: excerpt,
     keywords,
     content: parseSections(String(formData.get("content_sections") ?? "[]")),
   };

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 import { createSupabaseBrowserClient } from "@/utils/supabase/browser";
 
 export default function AdminLoginPage() {
@@ -40,7 +42,14 @@ export default function AdminLoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F5F5F4] px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#F5F5F4] px-4">
+      <Link
+        href="/"
+        className="w-full max-w-[360px] flex items-center gap-[6px] text-[14px] text-[#43586C] hover:text-[#1C2A38] mb-[16px]"
+      >
+        <ArrowLeft size={16} />
+        Back to site
+      </Link>
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-[360px] bg-white rounded-[16px] border border-[#E5E7EB] p-[32px]"

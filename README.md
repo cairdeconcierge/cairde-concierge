@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Conceige
 
-## Getting Started
+Marketing site and blog for Cairde Concierge, built with Next.js (App Router) and Supabase.
 
-First, run the development server:
+## Stack
+
+- [Next.js 16](https://nextjs.org) (App Router, React 19)
+- [Supabase](https://supabase.com) — Postgres, Auth, and Storage (blog cover images)
+- Tailwind CSS 4
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` with:
 
-## Learn More
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_SITE_URL=
+```
 
-To learn more about Next.js, take a look at the following resources:
+`NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` come from your Supabase project's API settings. `NEXT_PUBLIC_SITE_URL` is the site's public base URL (used for the sitemap and metadata).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/` — routes (marketing pages, `Blog`, `admin`)
+- `components/` — shared and page-specific UI components
+- `utils/supabase/` — Supabase clients (`browser.ts`, `server.ts`), the `proxy.ts`-invoked session/auth-gate logic (`middleware.ts`), admin authorization (`authz.ts`), and typed queries
+- `utils/contents/` — static page copy
 
-## Deploy on Vercel
+## Blog admin
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Blog posts are managed at `/admin`, backed by the `blog_posts` table in Supabase and a `blog-images` Storage bucket for cover images.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Admin access is gated by an `admin` role on the Supabase user's `app_metadata` (not `user_metadata`, which is user-editable). To grant a user admin access, run in the Supabase SQL editor:
+
+```sql
+update auth.users
+set raw_app_meta_data = raw_app_meta_data || '{"role":"admin"}'::jsonb
+where email = 'admin@example.com';
+```
+
+The user must sign out and back in at `/admin/login` for the new role to take effect.
+
+## Scripts
+
+- `npm run dev` — start the dev server
+- `npm run build` — production build
+- `npm run start` — run the production build
+- `npm run lint` — lint the project
+
+## Note on this Next.js version
+
+This repo uses a pre-release Next.js version with breaking changes from the version most tooling/training data assumes (e.g. `proxy.ts` replaces `middleware.ts`). See `AGENTS.md` and `node_modules/next/dist/docs/` for the current API surface before making framework-level changes.

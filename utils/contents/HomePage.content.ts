@@ -260,7 +260,7 @@ export const services: Service[] = [
     title: "Companionship & Social Engagement",
     description:
       "Bringing joy, connection, and meaningful conversation into every day.",
-    image: "/images/image-2ss.jpg",
+    image: "/images/social-engagement.jpg",
     alt_text: "Two women talking together on a garden terrace",
     link: "/MoreServices",
   },
@@ -277,7 +277,7 @@ export const services: Service[] = [
     title: "Accompaniment & Companionship",
     description:
       "Preserving routine, comfort, and independence at home.",
-    image: "/images/image-4.jpg",
+    image: "/images/accompaniment.jpg",
     alt_text: "A carer walking beside an older woman outdoors",
     link: "/MoreServices",
   },

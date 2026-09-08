@@ -7,6 +7,8 @@ const PACKAGE_OPTIONS = [
   "The Essential Check-In",
   "The Independence Package",
   "The Premium Peace of Mind Package",
+  "Trial Visit",
+  "Ad-Hoc Support",
   "Not sure yet help me decide",
 ];
 
@@ -105,6 +107,14 @@ export default function Form() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
+    const formEl = e.currentTarget;
+    const botcheck = (formEl.elements.namedItem("botcheck") as HTMLInputElement | null)
+      ?.checked;
+    if (botcheck) {
+      // Honeypot tripped: silently drop instead of hitting the API.
+      return;
+    }
+
     const validationErrors = validate(values);
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length > 0) {
@@ -119,6 +129,7 @@ export default function Form() {
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
           access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          botcheck,
           subject: "New consultation request",
           from_name: values.name,
           name: values.name,
