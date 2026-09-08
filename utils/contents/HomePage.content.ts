@@ -36,7 +36,7 @@ export const SIGNS = [
 export const STEPS = [
   {
     title: "Free Consultation",
-    body: "We begin with a no-obligation, in-depth assessment of your loved one's needs, preferences, and daily routines to understand how we can best support them.",
+    body: "We begin with a no-obligation, in-depth assessment of your loved one's needs, preferences, and daily routines to understand how we can best support them..",
   },
   {
     title: "Personalised Support Plan",
