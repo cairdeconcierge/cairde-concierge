@@ -53,7 +53,7 @@ export default function CorporateSeminar() {
                     <span className="font-semibold text-[#1C2A38]">
                       {item.label}
                     </span>{" "}
-                    — {item.text}
+                    : {item.text}
                   </span>
                 </li>
               ))}

@@ -49,11 +49,9 @@ export default function SupportPlans() {
             className="
               w-full
               max-w-full
-              h-[180px]
-              sm:h-[195px]
-              md:h-[220px]
+             
               lg:w-[416px]
-              lg:h-[279.5px]
+              h-full
               rounded-[16px]
               lg:rounded-[24px]
               border

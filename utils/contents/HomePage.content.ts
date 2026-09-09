@@ -849,49 +849,49 @@ export const Services = [
 export const moreServices =[
   {
      id: "lifestyle-assistance",
-     image: "/images/Service-1.png",
+     image: "/images/image-1.jpg",
      title:"Lifestyle Assistance",
      text:"Daily life should be enjoyed, not managed. We provide personalised, day-to-day support designed to keep seniors living comfortably and confidently in their own homes. Whether it's running errands, grocery shopping, handling light housework, or keeping track of daily routines, we handle the details so your loved one can focus on what brings them joy. Our goal is to make daily life easier while preserving independence, dignity, and quality of life.",
      link:"www.w3school.com"
   },
   {  
-    id: "companionship-social",
-     image: "/images/Service-2.png",
+     id: "companionship-social",
+     image: "/images/social-engagement.jpg",
      title:"Companionship & Social Engagement",
      text:"Meaningful connection is vital to health and happiness. We offer more than just a watchful eye; we provide genuine companionship that brightens daily life. Whether it's sharing a deep conversation, enjoying a favourite hobby, organising a birthday dinner outing, playing a board game, or taking a stroll through the neighbourhood, we focus on creating uplifting interactions that help seniors feel deeply valued, connected, and heard.",
      link:"www.w3school.com"
   },
   {  
      id:"personalised-support-plans",
-     image: "/images/Service-3.png",
+     image: "/images/image-3.jpg",
      title:"Personalised Support Plans",
      text:"No two seniors are alike, and neither are our support plans. We collaborate closely with you and your loved one to design a customised roadmap that respects their unique preferences, daily routines, and lifestyle. As life changes, we adapt right along with you. From managing daily schedules and coordinating services to keeping long-distance families informed and connecting you with trusted community resources, we handle the logistics so you can focus on being a family.",
      link:"www.w3school.com"
   },
   {  
      id: "accompaniment-companionship",
-     image: "/images/Service-4.png",
+     image: "/images/accompaniment.jpg",
      title:"Accompaniment & Companionship",
      text:"Dignified companionship for hospital appointments, outpatient clinics, family gatherings, and community social activities.",
      link:"www.w3school.com"
   },
   {
     id: "transport-errands-support",
-    image: "/images/Service-5.png",
+    image: "/images/image-6.jpg",
     title:"Transport & Errands Support",
     text:"True independence relies on freedom of movement. We ensure seniors never have to miss an appointment or skip an outing. From navigating medical visits to running errands like grocery shopping, prescription collection, post office runs, dry-cleaning collections and light domestic tidying, to enjoying social events, we provide seamless, door-to-door assistance.We do not provide transportation for clients in our own vehicle, nor do we drive clients' personal vehicles. All travel to appointments or social events is done via public transport or taxis, paid for by the client.",
     link:"www.w3school.com"
   },
   {
     id: "care-coordination",
-    image: "/images/Service-6.png",
+    image: "/images/image-7.jpg",
     title:"Care Coordination Services",
     text:"Navigating the logistics of senior life shouldn't be a source of stress. We provide organised, non-medical support to help seniors and their families manage daily responsibilities, appointments, and external services with ease. As your dedicated point of contact, we keep tasks scheduled, information organised, and communication clear, giving you total clarity without the clinical feel.",
     link:"www.w3school.com"
   },
   {
     id: "administrative-virtual-support",
-    image: "/images/Service-7.png",
+    image: "/images/image-8.jpg",
     title:"Administrative & Virtual Support",
     text:"At Cairde Concierge, we offer a 100% virtual administration support service to families across Ireland and the diaspora abroad. You don't need to be local to Dublin to use this we handle everything securely online and via phone.",
     link:"www.w3school.com"
