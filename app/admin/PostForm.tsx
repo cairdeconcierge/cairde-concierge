@@ -14,6 +14,32 @@ function toDatetimeLocal(iso: string) {
   )}:${pad(d.getMinutes())}`;
 }
 
+function splitIntoParagraphs(text: string): string[] {
+  const sentences = text
+    .match(/[^.!?]+[.!?]+(?:\s+|$)/g)
+    ?.map((s) => s.trim())
+    .filter(Boolean) ?? [text.trim()];
+
+  const groups: string[] = [];
+  let current = "";
+  let sentenceCount = 0;
+
+  for (const sentence of sentences) {
+    const wouldOverflow = current.length + sentence.length > 220;
+    if (current && (wouldOverflow || sentenceCount >= 2)) {
+      groups.push(current);
+      current = sentence;
+      sentenceCount = 1;
+    } else {
+      current = current ? `${current} ${sentence}` : sentence;
+      sentenceCount += 1;
+    }
+  }
+  if (current) groups.push(current);
+
+  return groups.length ? groups : [text];
+}
+
 function slugify(value: string) {
   return value
     .toLowerCase()
@@ -102,6 +128,23 @@ export default function PostForm({ action, post }: Props) {
           ? { ...s, paragraphs: s.paragraphs.filter((_, j) => j !== paraIdx) }
           : s
       )
+    );
+  }
+
+  function splitParagraph(sectionIdx: number, paraIdx: number) {
+    setSections((prev) =>
+      prev.map((s, i) => {
+        if (i !== sectionIdx) return s;
+        const newParas = splitIntoParagraphs(s.paragraphs[paraIdx]);
+        return {
+          ...s,
+          paragraphs: [
+            ...s.paragraphs.slice(0, paraIdx),
+            ...newParas,
+            ...s.paragraphs.slice(paraIdx + 1),
+          ],
+        };
+      })
     );
   }
 
@@ -267,25 +310,42 @@ export default function PostForm({ action, post }: Props) {
                 </button>
               </div>
 
-              {section.paragraphs.map((para, pIdx) => (
-                <div key={pIdx} className="flex items-start gap-[8px]">
-                  <textarea
-                    value={para}
-                    onChange={(e) =>
-                      updateParagraph(sIdx, pIdx, e.target.value)
-                    }
-                    rows={3}
-                    className={`${inputClasses} h-auto py-[10px]`}
-                  />
-                  <button
-                    type="button"
-                    onClick={() => removeParagraph(sIdx, pIdx)}
-                    className="shrink-0 text-[13px] text-[#D92D20]"
-                  >
-                    Remove
-                  </button>
-                </div>
-              ))}
+              {section.paragraphs.map((para, pIdx) => {
+                const sentenceCount =
+                  para.match(/[^.!?]+[.!?]+/g)?.length ?? 0;
+                const isDense = sentenceCount > 2 || para.length > 220;
+
+                return (
+                  <div key={pIdx} className="space-y-[4px]">
+                    <div className="flex items-start gap-[8px]">
+                      <textarea
+                        value={para}
+                        onChange={(e) =>
+                          updateParagraph(sIdx, pIdx, e.target.value)
+                        }
+                        rows={3}
+                        className={`${inputClasses} h-auto py-[10px]`}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => removeParagraph(sIdx, pIdx)}
+                        className="shrink-0 text-[13px] text-[#D92D20]"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                    {isDense && (
+                      <button
+                        type="button"
+                        onClick={() => splitParagraph(sIdx, pIdx)}
+                        className="text-[12px] text-[#5B805F]"
+                      >
+                        This paragraph is dense — split into shorter paragraphs
+                      </button>
+                    )}
+                  </div>
+                );
+              })}
 
               <button
                 type="button"

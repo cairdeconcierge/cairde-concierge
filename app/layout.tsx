@@ -26,9 +26,9 @@ const poppins = Poppins({
 });
 
 const DEFAULT_TITLE =
-  "Cairde Concierge | Non-Medical Senior Support in Dublin, Ireland";
+  "Senior Support & Companionship in Dublin | Cairde";
 const DEFAULT_DESCRIPTION =
-  "Dedicated non-medical support for seniors in Dublin, Ireland, with the warmth of family. We help seniors stay independent, safe and socially connected at home with consistent, one-on-one companionship families can trust.";
+  "Compassionate non-medical senior support and companionship in Dublin, helping older adults stay independent, connected and confident.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -157,16 +157,16 @@ export default async function BlogArticlePage({ params }: Props) {
             {/* Article body */}
             <article>
               {post.content.map((section, sectionIdx) => (
-                <div key={sectionIdx} className="mb-[36px]">
+                <div key={sectionIdx} className="mb-[56px]">
                   {section.heading && (
-                    <h2 className="font-poppins font-semibold text-[22px] md:text-[26px] leading-[130%] text-[#1C2A38] mb-[16px]">
+                    <h2 className="font-poppins font-semibold text-[22px] md:text-[26px] leading-[130%] text-[#1C2A38] mb-[24px]">
                       {section.heading}
                     </h2>
                   )}
                   {section.paragraphs.map((para, paraIdx) => (
                     <p
                       key={paraIdx}
-                      className="font-body text-[16px] md:text-[18px] leading-[175%] text-[#43586C] mb-[16px]"
+                      className="font-body text-[16px] md:text-[18px] leading-[185%] text-[#43586C] mb-[24px] last:mb-0"
                     >
                       {para}
                     </p>
