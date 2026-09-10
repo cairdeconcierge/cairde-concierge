@@ -6,10 +6,10 @@ const STATIC_ROUTES = [
   { path: "", priority: 1, changeFrequency: "weekly" as const },
   { path: "/Aboutus", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/Services", priority: 0.9, changeFrequency: "monthly" as const },
-  { path: "/MoreServices", priority: 0.6, changeFrequency: "monthly" as const },
+  { path: "/More-services", priority: 0.6, changeFrequency: "monthly" as const },
   { path: "/Pricing", priority: 0.7, changeFrequency: "monthly" as const },
   {
-    path: "/corporate-eldercare",
+    path: "/Corporate-eldercare",
     priority: 0.6,
     changeFrequency: "monthly" as const,
   },
@@ -32,7 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const postEntries: MetadataRoute.Sitemap = posts.map((post) => ({
-    url: `${SITE_URL}/Blog/${post.slug}`,
+    url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.published_at),
     changeFrequency: "monthly",
     priority: 0.6,

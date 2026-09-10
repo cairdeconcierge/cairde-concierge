@@ -60,7 +60,7 @@ export default function ServiceSupport() {
 
               {/* CHANGED: w-full on mobile, natural width on larger screens */}
               <div className="flex w-full items-start justify-start sm:w-auto">
-                <Link href="/corporate-eldercare">
+                <Link href="/Corporate-eldercare">
                   <Button
                     style="reverse"
                     css="h-[50px] w-full sm:w-auto"

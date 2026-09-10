@@ -7,6 +7,25 @@ type SiteFooterProps = {
   blurb?: string;
 };
 
+function PhoneIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="16"
+      height="16"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="shrink-0"
+    >
+      <path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 3.9c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8z" />
+    </svg>
+  );
+}
+
 function SocialIcon({ name }: { name: "instagram" | "tiktok" | "facebook" }) {
   if (name === "tiktok") {
     return (
@@ -80,8 +99,9 @@ export default function Footer({
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-[16px] text-[#FFFFFF] transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B08A4A] motion-reduce:transition-none"
+                      className="inline-flex items-center gap-2 text-[16px] text-[#FFFFFF] transition-colors duration-200 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#B08A4A] motion-reduce:transition-none"
                     >
+                      {link.icon === "phone" && <PhoneIcon />}
                       {link.label}
                     </Link>
                   </li>

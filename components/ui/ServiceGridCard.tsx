@@ -40,7 +40,7 @@ export default function ServiceGridCard({ icon, title, points }: Props) {
         </ul>
 
         <div className="mt-auto">
-          <Link href="/MoreServices" className="block w-full">
+          <Link href="/More-services" className="block w-full">
             <Button
               style="secondary"
               type="button"

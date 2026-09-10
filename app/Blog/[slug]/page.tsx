@@ -108,7 +108,7 @@ export default async function BlogArticlePage({ params }: Props) {
             alt={post.alt_text}
             fill
             priority
-            className="object-cover object-bottom"
+            className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-black/30" />
         </div>

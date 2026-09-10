@@ -11,7 +11,7 @@ export const navLinks = [
   },
   {
     title: "Corporate Elder Support",
-    router: "/corporate-eldercare",
+    router: "/Corporate-eldercare",
   },
   {
     title:"Pricing",
@@ -181,7 +181,7 @@ export const faqItems: FaqItem[] = [
 ];
 
 
-export type FooterLink = { label: string; href: string };
+export type FooterLink = { label: string; href: string; icon?: "phone" };
 export type FooterColumn = { title: string; links: FooterLink[] };
 
 export const footerColumns: FooterColumn[] = [
@@ -201,14 +201,14 @@ export const footerColumns: FooterColumn[] = [
   title: "Get in touch",
   links: [
     { label: "Contact", href: "/Request-consultation" },
-    { label: "+353 87 003 3223", href: "tel:+353870033223" },
+    { label: "+353 87 003 3223", href: "tel:+353870033223", icon: "phone" },
   ],
 },
 {
   title: "Legal",
   links: [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Use", href: "/terms-of-use" },
+    { label: "Privacy Policy", href: "/Privacy-policy" },
+    { label: "Terms of Use", href: "/Terms-of-use" },
   ],
 },
 ];
@@ -253,7 +253,7 @@ export const services: Service[] = [
     description: "Preserving routine, comfort, and independence at home.",
     image: "/images/image-1.jpg",
     alt_text: "A carer and an older woman chatting in a bright sitting room",
-    link: "/MoreServices",
+    link: "/More-services",
   },
   {
     id: "companionship",
@@ -262,7 +262,7 @@ export const services: Service[] = [
       "Bringing joy, connection, and meaningful conversation into every day.",
     image: "/images/social-engagement.jpg",
     alt_text: "Two women talking together on a garden terrace",
-    link: "/MoreServices",
+    link: "/More-services",
   },
   {
     id: "support-plans",
@@ -270,7 +270,7 @@ export const services: Service[] = [
     description: "Flexible support that evolves with your family's needs.",
     image: "/images/image-3.jpg",
     alt_text: "A carer reviewing a plan with an older woman at home",
-    link: "/MoreServices",
+    link: "/More-services",
   },
   {
     id: "accompaniment",
@@ -279,7 +279,7 @@ export const services: Service[] = [
       "Preserving routine, comfort, and independence at home.",
     image: "/images/accompaniment.jpg",
     alt_text: "A carer walking beside an older woman outdoors",
-    link: "/MoreServices",
+    link: "/More-services",
   },
   {
     id: "transport",
@@ -288,7 +288,7 @@ export const services: Service[] = [
       "Keeping seniors connected to their community, routines, and appointments.",
     image: "/images/image-6.jpg",
     alt_text: "A carer helping an older woman into a car",
-    link: "/MoreServices",
+    link: "/More-services",
   },
   {
     id: "care-coordination",
@@ -297,7 +297,7 @@ export const services: Service[] = [
       "Streamlining the details so you can focus on being a family.",
     image: "/images/image-7.jpg",
     alt_text: "A carer taking notes beside an older woman",
-    link: "/MoreServices",
+   link: "/More-services",
   },
   {
     id: "admin-virtual",
@@ -307,7 +307,7 @@ export const services: Service[] = [
     image: "/images/image-8.jpg",
     alt_text:
       "A carer helping an older woman with paperwork at a bookshelf",
-    link: "/MoreServices",
+    link: "/More-services",
   },
 ];
 
@@ -782,7 +782,7 @@ export const Services = [
     id: "lifestyle-assistance",
     icon: "/images/boxicons_handshake-filled.png",
     title: "Lifestyle Assistance",
-    link: "/MoreServices",
+    link: "/More-services",
     points: [
       "Preserving routine, comfort, and independence at home.",
       "We handle errands, grocery shopping, light housework, and daily routines.",
@@ -793,7 +793,7 @@ export const Services = [
     id: "companionship-social",
     icon: "/images/boxicons_handshake-filled.png",
     title: "Companionship & Social Engagement",
-    link: "/MoreServices",
+    link: "/More-services",
     points: [
       "Genuine companionship that brightens daily life.",
       "We focus on interactions that help seniors feel valued, connected, and heard.",
@@ -804,7 +804,7 @@ export const Services = [
     id: "personalized-support-plan",
     icon: "/images/boxicons_handshake-filled.png",
     title: "Personalized Support Plan",
-    link: "/MoreServices",
+    link: "/More-services",
     points: [
       "No two seniors are alike, and neither are our plans.",
       "We collaborate closely with your family to design a customized roadmap.",
@@ -815,7 +815,7 @@ export const Services = [
     id: "accompaniment-chaperone",
     icon: "/images/boxicons_handshake-filled.png",
     title: "Accompaniment & Chaperone",
-    link: "/MoreServices",
+    link: "/More-services",
     points: [
       "Dignified companionship for hospital appointments.",
       "Dignified companionship for outpatient clinics, family gatherings, and community social activities.",
@@ -826,7 +826,7 @@ export const Services = [
     id: "transport-errand-support",
     icon: "/images/boxicons_handshake-filled.png",
     title: "Transport & Errand Support",
-    link: "/MoreServices",
+    link: "/More-services",
     points: [
       "True independence relies on freedom of movement.",
       "We provide seamless, door-to-door assistance via public transport or client-paid taxis.",
@@ -837,7 +837,7 @@ export const Services = [
     id: "care-coordination",
     icon: "/images/boxicons_handshake-filled.png",
     title: "Care Coordination Services",
-    link: "/MoreServices",
+    link: "/More-services",
     points: [
       "We organize schedules, keep essential lifestyle information documented.",
       "We refer to trusted, licensed care professionals when medical services are needed.",
