@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { getBlogPostBySlug, getAllBlogSlugs, getAllBlogPosts } from "@/utils/supabase/queries";
+import {
+  getBlogPostBySlug,
+  getAllBlogSlugs,
+  getAllBlogPosts,
+} from "@/utils/supabase/queries";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Banner from "@/components/home/Banner";
@@ -63,11 +67,14 @@ export default async function BlogArticlePage({ params }: Props) {
     notFound();
   }
 
-  const formattedDate = new Date(post.published_at).toLocaleDateString("en-IE", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
+  const formattedDate = new Date(post.published_at).toLocaleDateString(
+    "en-IE",
+    {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    },
+  );
 
   const relatedPosts = allPosts.filter((p) => p.slug !== slug).slice(0, 2);
 
@@ -102,15 +109,19 @@ export default async function BlogArticlePage({ params }: Props) {
 
       <main className="pt-[140px] md:pt-[160px] pb-[80px]">
         {/* Hero image */}
-        <div className="w-full h-[300px] md:h-[480px] relative overflow-hidden">
-          <Image
-            src={post.image_url}
-            alt={post.alt_text}
-            fill
-            priority
-            className="object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-black/30" />
+        <div className="relative w-full h-[300px] md:h-[480px] overflow-hidden">
+          <div className="relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-[21/9] max-h-[520px] overflow-hidden">
+            <Image
+              src={post.image_url}
+              alt={post.alt_text}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-[50%_35%] md:object-[50%_40%]"
+            />
+            <div className="absolute inset-0 bg-black/30" />
+          </div>
+          {/* <div className="absolute inset-0 bg-black/30" /> */}
         </div>
 
         {/* Article container */}
