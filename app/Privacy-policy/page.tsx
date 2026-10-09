@@ -65,7 +65,7 @@ export default function Page() {
             <p className="mx-auto mt-4 max-w-2xl font-body text-[16px] leading-[160%] text-[#5B5C61] md:text-[18px]">
               Clear information about how Cairde Concierge handles personal
               data and the terms that apply when you use our website and
-              services.
+              services..
             </p>
           </div>
         </section>
@@ -106,10 +106,10 @@ export default function Page() {
                 support service based in Dublin, Ireland. For
                 privacy-related queries, contact us at{" "}
                 <a
-                  href="mailto:hello@cairdeconcierge.ie"
+                  href="mailto:info@cairdeconcierge.ie"
                   className="text-[#B08A4A] underline"
                 >
-                  hello@cairdeconcierge.ie
+                  info@cairdeconcierge.ie
                 </a>
                 .
               </p>
@@ -342,10 +342,10 @@ export default function Page() {
               <p>
                 To exercise your rights, contact{" "}
                 <a
-                  href="mailto:hello@cairdeconcierge.ie"
+                  href="mailto:info@cairdeconcierge.ie"
                   className="text-[#B08A4A] underline"
                 >
-                  hello@cairdeconcierge.ie
+                  info@cairdeconcierge.ie
                 </a>
                 . You also have the right to contact the Irish Data
                 Protection Commission if you have concerns about how your
@@ -386,10 +386,10 @@ export default function Page() {
               </span>{" "}
               Email us at{" "}
               <a
-                href="mailto:hello@cairdeconcierge.ie"
+                href="mailto:info@cairdeconcierge.ie"
                 className="text-[#B08A4A] underline"
               >
-                hello@cairdeconcierge.ie
+                info@cairdeconcierge.ie
               </a>
               .
             </p>

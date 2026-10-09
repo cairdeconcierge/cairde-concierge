@@ -237,10 +237,10 @@ export default function Page() {
               </span>{" "}
               Email us at{" "}
               <a
-                href="mailto:hello@cairdeconcierge.ie"
+                href="mailto:info@cairdeconcierge.ie"
                 className="text-[#B08A4A] underline"
               >
-                hello@cairdeconcierge.ie
+                info@cairdeconcierge.ie
               </a>
               .
             </p>
