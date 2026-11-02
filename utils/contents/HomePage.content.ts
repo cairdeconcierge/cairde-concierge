@@ -1,4 +1,4 @@
-import { AboutPage, ServicesPage,Pricing } from "../Route";
+import { AboutPage, ServicesPage, Pricing } from "../Route";
 
 export const navLinks = [
   {
@@ -14,13 +14,13 @@ export const navLinks = [
     router: "/Corporate-eldercare",
   },
   {
-    title:"Pricing",
-    router:Pricing
+    title: "Pricing",
+    router: Pricing,
   },
   {
-   title:"Blog",
-   router:"/Blog"
-  }
+    title: "Blog",
+    router: "/Blog",
+  },
 ];
 
 export const SIGNS = [
@@ -31,7 +31,6 @@ export const SIGNS = [
   "Finding travel or running errands increasingly difficult",
   "wanting to stay at home, but needing a helping hand",
 ];
-
 
 export const STEPS = [
   {
@@ -54,35 +53,34 @@ export const STEPS = [
 
 export const Offer = [
   {
-    title:"Lifestyle Assistance",
-    text:"Preserving routine, comfort, and independence at home."
+    title: "Lifestyle Assistance",
+    text: "Preserving routine, comfort, and independence at home.",
   },
   {
-    title:"Companionship & Social Engagement",
-    text:"Bringing joy, connection, and meaningful conversation into every day."
+    title: "Companionship & Social Engagement",
+    text: "Bringing joy, connection, and meaningful conversation into every day.",
   },
   {
-    title:"Personalised Support Plans",
-    text:"Flexible support that evolves with your family's needs."
+    title: "Personalised Support Plans",
+    text: "Flexible support that evolves with your family's needs.",
   },
   {
-    title:"Accompaniment & Companionship",
-    text:"Preserving routine, comfort, and independence at home."
+    title: "Accompaniment & Companionship",
+    text: "Preserving routine, comfort, and independence at home.",
   },
   {
-    title:"Transport & Errands Support",
-    text:"Keeping seniors connected to their community, routines, and appointments."
+    title: "Transport & Errands Support",
+    text: "Keeping seniors connected to their community, routines, and appointments.",
   },
   {
-    title:"Care Coordination Services",
-    text:"Streamlining the details so you can focus on being a family."
+    title: "Care Coordination Services",
+    text: "Streamlining the details so you can focus on being a family.",
   },
   {
-    title:"Administrative & Virtual Support",
-    text:"Remote digital support and appointment coordination for families near and far."
-  }
-]
-
+    title: "Administrative & Virtual Support",
+    text: "Remote digital support and appointment coordination for families near and far.",
+  },
+];
 
 export const PACKAGES = [
   {
@@ -180,7 +178,6 @@ export const faqItems: FaqItem[] = [
   },
 ];
 
-
 export type FooterLink = { label: string; href: string; icon?: "phone" };
 export type FooterColumn = { title: string; links: FooterLink[] };
 
@@ -191,26 +188,30 @@ export const footerColumns: FooterColumn[] = [
       { label: "About", href: "/Aboutus" },
       { label: "Services", href: "/Services" },
       { label: "Packages", href: "/Pricing" },
+      { label: "Facility Partners", href: "/Facility-partners" },
     ],
   },
   {
     title: "Resources",
-    links: [{ label: "Blog", href: "/Blog" }],
+    links: [
+      { label: "Blog", href: "/Blog" },
+      { label: "Employee Wellness", href: "/Employee-Wellness" },
+    ],
   },
- {
-  title: "Get in touch",
-  links: [
-    { label: "Contact", href: "/Request-consultation" },
-    { label: "+353 87 003 3223", href: "tel:+353870033223", icon: "phone" },
-  ],
-},
-{
-  title: "Legal",
-  links: [
-    { label: "Privacy Policy", href: "/Privacy-policy" },
-    { label: "Terms of Use", href: "/Terms-of-use" },
-  ],
-},
+  {
+    title: "Get in touch",
+    links: [
+      { label: "Contact", href: "/Request-consultation" },
+      { label: "+353 87 003 3223", href: "tel:+353870033223", icon: "phone" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Privacy Policy", href: "/Privacy-policy" },
+      { label: "Terms of Use", href: "/Terms-of-use" },
+    ],
+  },
 ];
 
 export type SocialLink = {
@@ -275,8 +276,7 @@ export const services: Service[] = [
   {
     id: "accompaniment",
     title: "Accompaniment & Companionship",
-    description:
-      "Preserving routine, comfort, and independence at home.",
+    description: "Preserving routine, comfort, and independence at home.",
     image: "/images/accompaniment.jpg",
     alt_text: "A carer walking beside an older woman outdoors",
     link: "/More-services",
@@ -293,11 +293,10 @@ export const services: Service[] = [
   {
     id: "care-coordination",
     title: "Care Coordination Services",
-    description:
-      "Streamlining the details so you can focus on being a family.",
+    description: "Streamlining the details so you can focus on being a family.",
     image: "/images/image-7.jpg",
     alt_text: "A carer taking notes beside an older woman",
-   link: "/More-services",
+    link: "/More-services",
   },
   {
     id: "admin-virtual",
@@ -305,8 +304,7 @@ export const services: Service[] = [
     description:
       "Remote digital support and appointment coordination for families near and far.",
     image: "/images/image-8.jpg",
-    alt_text:
-      "A carer helping an older woman with paperwork at a bookshelf",
+    alt_text: "A carer helping an older woman with paperwork at a bookshelf",
     link: "/More-services",
   },
 ];
@@ -327,8 +325,7 @@ export const PACKAGESPRICING = [
     standard: "€45/hr · €360/month",
     price: "€90/week · €360/month",
     featured: false,
-    bookingUrl:
-      "https://tidycal.com/cairdeconcierege/30-minute-meeting",
+    bookingUrl: "https://tidycal.com/cairdeconcierege/30-minute-meeting",
   },
 
   {
@@ -346,8 +343,7 @@ export const PACKAGESPRICING = [
     standard: "€40/hr · €640/month",
     price: "€160/week · €640/month",
     featured: true,
-    bookingUrl:
-      "https://tidycal.com/cairdeconcierege/60-minute-meeting",
+    bookingUrl: "https://tidycal.com/cairdeconcierege/60-minute-meeting",
   },
 
   {
@@ -411,7 +407,8 @@ export const Project = [
     id: "senior-home-safety-audit",
     tag: "Home Safety",
     title: "Senior Home Safety & De-Cluttering Audit",
-    subtitle: "A thorough, practical walkthrough for proactive fall prevention.",
+    subtitle:
+      "A thorough, practical walkthrough for proactive fall prevention.",
     intro:
       "Falls are one of the leading causes of lost independence for older adults. Our home safety audit identifies hidden hazards before they cause an accident.",
     details: [
@@ -435,7 +432,8 @@ export const Project = [
     id: "tech-independence-masterclass",
     tag: "Digital Skills",
     title: "The Tech Independence Masterclass",
-    subtitle: "Bridging the digital gap to keep your family connected, safe, and close.",
+    subtitle:
+      "Bridging the digital gap to keep your family connected, safe, and close.",
     intro:
       "Isolation can take a heavy toll on a senior's wellbeing. We help older adults confidently master modern communication tools so they can stay in daily contact with grandchildren and extended family.",
     details: [
@@ -458,7 +456,7 @@ export const Project = [
   {
     id: "welcome-home-discharge-package",
     tag: "Hospital Transition",
-    title: "The \"Welcome Home\" Hospital Discharge Package",
+    title: 'The "Welcome Home" Hospital Discharge Package',
     subtitle: "A warm, safe, fully prepared home after a hospital stay.",
     intro:
       "Leaving hospital after a medical procedure or extended stay can be an incredibly stressful transition for both the patient and their family. We step in to manage the homecoming, with your written authorisation to liaise with the hospital discharge team.",
@@ -487,7 +485,8 @@ export const Project = [
     id: "right-sizing-move-manager",
     tag: "Downsizing",
     title: "The Right-Sizing Move Manager",
-    subtitle: "Handling the overwhelming logistics of downsizing, so you can focus on family.",
+    subtitle:
+      "Handling the overwhelming logistics of downsizing, so you can focus on family.",
     intro:
       "Helping a parent downsize from a lifetime family home into a smaller, more manageable apartment or retirement community is emotionally and physically exhausting. We act as your project manager for the move.",
     details: [
@@ -512,7 +511,6 @@ export const Project = [
     priceNote: "Final quote depends on scope",
   },
 ];
-
 
 export type BlogSection = {
   heading?: string;
@@ -602,7 +600,8 @@ export const Blog: BlogPost[] = [
         ],
       },
       {
-        heading: "Step 4 – Applying for a Nursing Home Loan (the Ancillary State Support)",
+        heading:
+          "Step 4 – Applying for a Nursing Home Loan (the Ancillary State Support)",
         paragraphs: [
           "If your loved one's main asset is their home and they cannot afford their 7.5% annual property contribution from income, they can apply for an Ancillary State Support (ASS) also known as the 'nursing home loan'. Under this arrangement, the State pays the property contribution on your behalf, and the amount is repaid (with interest) when the property is eventually sold, either during the person's lifetime or from their estate after death.",
           "This means that entering a nursing home does not automatically require selling the family home. The loan is registered as a charge on the property with the Property Registration Authority.",
@@ -623,7 +622,8 @@ export const Blog: BlogPost[] = [
     slug: "signs-parent-needs-support",
     image: "/images/blog-2.png",
     alt: "Carer laughing with an older woman at home",
-    title: "7 Signs Your Ageing Parent in Dublin May Need Extra Support at Home",
+    title:
+      "7 Signs Your Ageing Parent in Dublin May Need Extra Support at Home",
     excerpt:
       "The subtle changes families often notice, and how the right support can make everyday life easier before a crisis point is reached.",
     href: "/Blog/signs-parent-needs-support",
@@ -710,7 +710,8 @@ export const Blog: BlogPost[] = [
     slug: "hidden-cost-of-loneliness",
     image: "/images/blog-3.png",
     alt: "Older man sitting alone by a window",
-    title: "The Hidden Cost of Loneliness: Why Companionship Matters for Senior Wellbeing",
+    title:
+      "The Hidden Cost of Loneliness: Why Companionship Matters for Senior Wellbeing",
     excerpt:
       "Why social connection matters as we age, and how regular companionship can support a happier, more connected life for older adults in Dublin.",
     href: "/Blog/hidden-cost-of-loneliness",
@@ -750,7 +751,8 @@ export const Blog: BlogPost[] = [
         ],
       },
       {
-        heading: "Why Professional Companionship is Different from Family Visits",
+        heading:
+          "Why Professional Companionship is Different from Family Visits",
         paragraphs: [
           "Adult children and grandchildren are often the most important relationships in an older person's life  and regular family contact genuinely matters. But family visits, however loving, are rarely consistent enough, or long enough, to address the daily texture of loneliness.",
           "Professional companionship fills a specific and irreplaceable gap. A dedicated companion visits on a regular, predictable schedule and that predictability itself has therapeutic value. Knowing that someone is coming on Tuesday morning gives the week structure and gives the older person something to look forward to.",
@@ -775,7 +777,6 @@ export const Blog: BlogPost[] = [
     ],
   },
 ];
-
 
 export const Services = [
   {
@@ -845,55 +846,54 @@ export const Services = [
   },
 ];
 
-
-export const moreServices =[
+export const moreServices = [
   {
-     id: "lifestyle-assistance",
-     image: "/images/image-1.jpg",
-     title:"Lifestyle Assistance",
-     text:"Daily life should be enjoyed, not managed. We provide personalised, day-to-day support designed to keep seniors living comfortably and confidently in their own homes. Whether it's running errands, grocery shopping, handling light housework, or keeping track of daily routines, we handle the details so your loved one can focus on what brings them joy. Our goal is to make daily life easier while preserving independence, dignity, and quality of life.",
-     link:"www.w3school.com"
+    id: "lifestyle-assistance",
+    image: "/images/image-1.jpg",
+    title: "Lifestyle Assistance",
+    text: "Daily life should be enjoyed, not managed. We provide personalised, day-to-day support designed to keep seniors living comfortably and confidently in their own homes. Whether it's running errands, grocery shopping, handling light housework, or keeping track of daily routines, we handle the details so your loved one can focus on what brings them joy. Our goal is to make daily life easier while preserving independence, dignity, and quality of life.",
+    link: "www.w3school.com",
   },
-  {  
-     id: "companionship-social",
-     image: "/images/social-engagement.jpg",
-     title:"Companionship & Social Engagement",
-     text:"Meaningful connection is vital to health and happiness. We offer more than just a watchful eye; we provide genuine companionship that brightens daily life. Whether it's sharing a deep conversation, enjoying a favourite hobby, organising a birthday dinner outing, playing a board game, or taking a stroll through the neighbourhood, we focus on creating uplifting interactions that help seniors feel deeply valued, connected, and heard.",
-     link:"www.w3school.com"
+  {
+    id: "companionship-social",
+    image: "/images/social-engagement.jpg",
+    title: "Companionship & Social Engagement",
+    text: "Meaningful connection is vital to health and happiness. We offer more than just a watchful eye; we provide genuine companionship that brightens daily life. Whether it's sharing a deep conversation, enjoying a favourite hobby, organising a birthday dinner outing, playing a board game, or taking a stroll through the neighbourhood, we focus on creating uplifting interactions that help seniors feel deeply valued, connected, and heard.",
+    link: "www.w3school.com",
   },
-  {  
-     id:"personalised-support-plans",
-     image: "/images/image-3.jpg",
-     title:"Personalised Support Plans",
-     text:"No two seniors are alike, and neither are our support plans. We collaborate closely with you and your loved one to design a customised roadmap that respects their unique preferences, daily routines, and lifestyle. As life changes, we adapt right along with you. From managing daily schedules and coordinating services to keeping long-distance families informed and connecting you with trusted community resources, we handle the logistics so you can focus on being a family.",
-     link:"www.w3school.com"
+  {
+    id: "personalised-support-plans",
+    image: "/images/image-3.jpg",
+    title: "Personalised Support Plans",
+    text: "No two seniors are alike, and neither are our support plans. We collaborate closely with you and your loved one to design a customised roadmap that respects their unique preferences, daily routines, and lifestyle. As life changes, we adapt right along with you. From managing daily schedules and coordinating services to keeping long-distance families informed and connecting you with trusted community resources, we handle the logistics so you can focus on being a family.",
+    link: "www.w3school.com",
   },
-  {  
-     id: "accompaniment-companionship",
-     image: "/images/accompaniment.jpg",
-     title:"Accompaniment & Companionship",
-     text:"Dignified companionship for hospital appointments, outpatient clinics, family gatherings, and community social activities.",
-     link:"www.w3school.com"
+  {
+    id: "accompaniment-companionship",
+    image: "/images/accompaniment.jpg",
+    title: "Accompaniment & Companionship",
+    text: "Dignified companionship for hospital appointments, outpatient clinics, family gatherings, and community social activities.",
+    link: "www.w3school.com",
   },
   {
     id: "transport-errands-support",
     image: "/images/image-6.jpg",
-    title:"Transport & Errands Support",
-    text:"True independence relies on freedom of movement. We ensure seniors never have to miss an appointment or skip an outing. From navigating medical visits to running errands like grocery shopping, prescription collection, post office runs, dry-cleaning collections and light domestic tidying, to enjoying social events, we provide seamless, door-to-door assistance.We do not provide transportation for clients in our own vehicle, nor do we drive clients' personal vehicles. All travel to appointments or social events is done via public transport or taxis, paid for by the client.",
-    link:"www.w3school.com"
+    title: "Transport & Errands Support",
+    text: "True independence relies on freedom of movement. We ensure seniors never have to miss an appointment or skip an outing. From navigating medical visits to running errands like grocery shopping, prescription collection, post office runs, dry-cleaning collections and light domestic tidying, to enjoying social events, we provide seamless, door-to-door assistance.We do not provide transportation for clients in our own vehicle, nor do we drive clients' personal vehicles. All travel to appointments or social events is done via public transport or taxis, paid for by the client.",
+    link: "www.w3school.com",
   },
   {
     id: "care-coordination",
     image: "/images/image-7.jpg",
-    title:"Care Coordination Services",
-    text:"Navigating the logistics of senior life shouldn't be a source of stress. We provide organised, non-medical support to help seniors and their families manage daily responsibilities, appointments, and external services with ease. As your dedicated point of contact, we keep tasks scheduled, information organised, and communication clear, giving you total clarity without the clinical feel.",
-    link:"www.w3school.com"
+    title: "Care Coordination Services",
+    text: "Navigating the logistics of senior life shouldn't be a source of stress. We provide organised, non-medical support to help seniors and their families manage daily responsibilities, appointments, and external services with ease. As your dedicated point of contact, we keep tasks scheduled, information organised, and communication clear, giving you total clarity without the clinical feel.",
+    link: "www.w3school.com",
   },
   {
     id: "administrative-virtual-support",
     image: "/images/image-8.jpg",
-    title:"Administrative & Virtual Support",
-    text:"At Cairde Concierge, we offer a 100% virtual administration support service to families across Ireland and the diaspora abroad. You don't need to be local to Dublin to use this we handle everything securely online and via phone.",
-    link:"www.w3school.com"
-  }
-]
+    title: "Administrative & Virtual Support",
+    text: "At Cairde Concierge, we offer a 100% virtual administration support service to families across Ireland and the diaspora abroad. You don't need to be local to Dublin to use this we handle everything securely online and via phone.",
+    link: "www.w3school.com",
+  },
+];
