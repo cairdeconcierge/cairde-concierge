@@ -128,7 +128,8 @@ export default function Header() {
           </ul>
 
           <div className="mt-10">
-            <Link href="https://tidycal.com/cairdeconcierege/15-minute-meeting">
+            {/* <Link href="https://tidycal.com/cairdeconcierege/15-minute-meeting"> */}
+            <Link href="https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100642574">
               <Button style="danger" type="button" css="h-[52px] w-full">
                 Book a Consultation
               </Button>

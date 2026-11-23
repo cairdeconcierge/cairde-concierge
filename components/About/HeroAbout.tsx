@@ -39,9 +39,9 @@ export default function HeroAbout() {
               </Button>
             </Link>
           </div>
-          <p className="mt-[20px] text-[14px] text-white/70 text-center font-body">
+          {/* <p className="mt-[20px] text-[14px] text-white/70 text-center font-body">
             Carer &amp; senior companionship
-          </p>
+          </p> */}
         </div>
       </div>
     </section>

@@ -31,13 +31,13 @@ export default function SupportAbout() {
               </p>
 
               <p className="font-body text-[16px] leading-[160%] text-[#43586C] md:text-[18px] lg:text-[20px]">
-                In Irish, Cairde means friends — and that single word defines
+                In Irish, Cairde means friends and that single word defines
                 our philosophy, our standards, and everything we do.
               </p>
             </div>
 
             <div className="flex items-center justify-center">
-              <div className="h-[308px] w-full max-w-full overflow-hidden rounded-[24px] bg-blue-900 md:h-[461px]">
+              <div className="h-[308px] w-full max-w-full overflow-hidden rounded-[24px] md:h-[461px]">
                 <Image
                   src="/images/support-1.png"
                   width={500}

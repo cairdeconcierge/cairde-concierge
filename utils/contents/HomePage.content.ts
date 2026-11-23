@@ -21,6 +21,10 @@ export const navLinks = [
     title: "Blog",
     router: "/Blog",
   },
+  {
+    title: "partnership",
+    router: "/Facility-partners",
+  },
 ];
 
 export const SIGNS = [
@@ -202,7 +206,8 @@ export const footerColumns: FooterColumn[] = [
     title: "Get in touch",
     links: [
       { label: "Contact", href: "/Request-consultation" },
-      { label: "+353 87 003 3223", href: "tel:+353870033223", icon: "phone" },
+      { label: "+353 87 003 3223", href: "tel:+353870033223" },
+      { label: "info@cairdeconcierge.ie.", href: "mailto:info@cairdeconcierge.ie."},
     ],
   },
   {
@@ -321,11 +326,14 @@ export const PACKAGESPRICING = [
       "Post office or pharmacy errands",
       "Library trips",
       "Light administrative form-filling",
+      "Light tidying",
+      "Companionship and social visits"
     ],
     standard: "€45/hr · €360/month",
-    price: "€90/week · €360/month",
+    price: "€90/week · €390/month",
     featured: false,
-    bookingUrl: "https://tidycal.com/cairdeconcierege/30-minute-meeting",
+    // bookingUrl: "https://tidycal.com/cairdeconcierege/30-minute-meeting",
+    bookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643241",
   },
 
   {
@@ -339,11 +347,15 @@ export const PACKAGESPRICING = [
       "Hospital or GP accompaniment",
       "Light meal preparation",
       "Local neighbourhood walks",
+      "Light home tidying",
+      "Weekly grocery shopping",
+      "Post office and pharmacy errands"
     ],
     standard: "€40/hr · €640/month",
-    price: "€160/week · €640/month",
+    price: "€160/week · €693/month",
     featured: true,
-    bookingUrl: "https://tidycal.com/cairdeconcierege/60-minute-meeting",
+    bookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643406",
+    // bookingUrl: "https://tidycal.com/cairdeconcierege/60-minute-meeting",
   },
 
   {
@@ -356,13 +368,19 @@ export const PACKAGESPRICING = [
       "Multiple social and community outings",
       "Accompaniment for hospital or GP appointments",
       "Light home tidying",
-      "Fresh meal preparation and assembly several times a week",
+      "Light meal preparation assistance",
+      "Companionship and social visits",
+      "Weekly grocery shopping",
+      "Post office and pharmacy errands",
+      "Report to family"
     ],
     standard: "€35/hr · €1,120/month",
-    price: "€280/week · €1,120/month",
+    price: "€280/week · €1,213/month",
     featured: false,
     bookingUrl:
-      "https://tidycal.com/cairdeconcierge/the-premium-peace-of-mind-package-1-120-month",
+      "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643686",
+    // bookingUrl:
+    //   "https://tidycal.com/cairdeconcierge/the-premium-peace-of-mind-package-1-120-month",
   },
 
   {
@@ -377,10 +395,12 @@ export const PACKAGESPRICING = [
       "No ongoing commitment",
     ],
     standard: "€65/hour",
-    price: "€130 total · 2 hours minimum",
+    price: "€80/ hour",
     featured: false,
     bookingUrl:
-      "https://tidycal.com/cairdeconcierge/trial-visit-not-less-than-2hour-130-total",
+      "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643778",
+    // bookingUrl:
+    //   "https://tidycal.com/cairdeconcierge/trial-visit-not-less-than-2hour-130-total",
   },
 
   {
@@ -395,10 +415,12 @@ export const PACKAGESPRICING = [
       "No recurring commitment",
     ],
     standard: "€50/hour",
-    price: "€200/hour · 4-hour minimum",
+    price: "€65/hour · 4-hour minimum",
     featured: false,
     bookingUrl:
-      "https://tidycal.com/cairdeconcierge/ad-hoc-support-4-hours-one-off-200",
+      "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643861",
+    // bookingUrl:
+    //   "https://tidycal.com/cairdeconcierge/ad-hoc-support-4-hours-one-off-200",
   },
 ];
 

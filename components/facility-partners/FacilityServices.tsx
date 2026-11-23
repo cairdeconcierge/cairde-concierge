@@ -24,7 +24,7 @@ export default function FacilityServices() {
           </div>
 
           <p className="text-center text-[#1C2A38] text-[16px] md:text-[18px] font-body font-semibold mt-[32px]">
-            Facility rates from <span className="text-[#5B805F]">€40/hour</span>,
+            Facility rates are
             tailored to your facility&apos;s schedule and volume of residents.
           </p>
         </div>
