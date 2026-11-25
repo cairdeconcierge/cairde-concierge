@@ -11,25 +11,41 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 0);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrolled(window.scrollY > 0);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
+  // useEffect(() => {
+  //   document.body.style.overflow = menuOpen ? "hidden" : "";
 
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [menuOpen]);
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [menuOpen]);
 
   const closeMenu = () => setMenuOpen(false);
+
+
+  useEffect(() => {
+  if (menuOpen) {
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+  } else {
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  }
+
+  return () => {
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+  };
+}, [menuOpen]);
 
   return (
     <header
@@ -114,7 +130,7 @@ export default function Header() {
       <div
         id="mobile-navigation"
         aria-hidden={!menuOpen}
-        className={`fixed bottom-0 left-0 right-0 top-[99px] z-40 bg-white transition-all duration-300 xl:hidden ${
+        className={`fixed bottom-0 left-0 right-0 top-[99px] z-[100] bg-white transition-all duration-300 xl:hidden ${
           menuOpen
             ? "visible translate-y-0 opacity-100"
             : "invisible -translate-y-5 opacity-0 pointer-events-none"

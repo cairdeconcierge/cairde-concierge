@@ -81,7 +81,7 @@ export default function Footer({
   return (
     <footer className="bg-[#0B0C0E] text-[#9A9BA1]">
       <div className="mx-auto container  py-14 md:py-16">
-        <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-[1.6fr_repeat(5,minmax(0,1fr))] md:gap-x-6">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-[1.6fr_repeat(5,minmax(0,1fr))] md:gap-x-6">
           <div className="col-span-2 max-w-xs md:col-span-1">
             <Logo />
             <p className="text-[16px] leading-[160%] font-body text-white">

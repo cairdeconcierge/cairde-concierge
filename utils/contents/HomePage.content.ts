@@ -892,7 +892,7 @@ export const moreServices = [
   },
   {
     id: "accompaniment-companionship",
-    image: "/images/accompaniment.jpg",
+    image: "/images/accompany.jpg",
     title: "Accompaniment & Companionship",
     text: "Dignified companionship for hospital appointments, outpatient clinics, family gatherings, and community social activities.",
     link: "www.w3school.com",
