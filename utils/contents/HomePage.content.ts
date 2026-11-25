@@ -22,7 +22,7 @@ export const navLinks = [
     router: "/Blog",
   },
   {
-    title: "partnership",
+    title: "Partnership",
     router: "/Facility-partners",
   },
 ];
@@ -282,7 +282,7 @@ export const services: Service[] = [
     id: "accompaniment",
     title: "Accompaniment & Companionship",
     description: "Preserving routine, comfort, and independence at home.",
-    image: "/images/accompaniment.jpg",
+    image: "/images/accompany.jpg",
     alt_text: "A carer walking beside an older woman outdoors",
     link: "/More-services",
   },
@@ -317,7 +317,7 @@ export const services: Service[] = [
 export const PACKAGESPRICING = [
   {
     type: "package",
-    hours: "2 hours / week",
+    hours: "1 hours per week",
     title: "The Essential Check-In",
     description:
       "Perfect for independent older adults who just need a helping hand with weekly logistics.",
@@ -329,8 +329,8 @@ export const PACKAGESPRICING = [
       "Light tidying",
       "Companionship and social visits"
     ],
-    standard: "€45/hr · €360/month",
-    price: "€90/week · €390/month",
+    // standard: "€45/hr · €360/month",
+    price: "€390/month",
     featured: false,
     // bookingUrl: "https://tidycal.com/cairdeconcierege/30-minute-meeting",
     bookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643241",
@@ -338,7 +338,7 @@ export const PACKAGESPRICING = [
 
   {
     type: "package",
-    hours: "4 hours / week",
+    hours: "2 hours per week",
     title: "The Independence Package",
     description:
       "A balanced blend of practical household support and meaningful social connection.",
@@ -351,8 +351,8 @@ export const PACKAGESPRICING = [
       "Weekly grocery shopping",
       "Post office and pharmacy errands"
     ],
-    standard: "€40/hr · €640/month",
-    price: "€160/week · €693/month",
+    // standard: "€40/hr · €640/month",
+    price: "€693/month",
     featured: true,
     bookingUrl: "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643406",
     // bookingUrl: "https://tidycal.com/cairdeconcierege/60-minute-meeting",
@@ -360,7 +360,7 @@ export const PACKAGESPRICING = [
 
   {
     type: "package",
-    hours: "8 hours / week",
+    hours: "3 hours per week",
     title: "The Premium Peace of Mind Package",
     description:
       "Comprehensive, high-level lifestyle coordination for busy families wanting total reassurance.",
@@ -374,8 +374,8 @@ export const PACKAGESPRICING = [
       "Post office and pharmacy errands",
       "Report to family"
     ],
-    standard: "€35/hr · €1,120/month",
-    price: "€280/week · €1,213/month",
+    // standard: "€35/hr · €1,120/month",
+    price: "€1,213/month",
     featured: false,
     bookingUrl:
       "https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100643686",
@@ -394,7 +394,7 @@ export const PACKAGESPRICING = [
       "Experience our support",
       "No ongoing commitment",
     ],
-    standard: "€65/hour",
+    // standard: "€65/hour",
     price: "€80/ hour",
     featured: false,
     bookingUrl:
@@ -414,7 +414,7 @@ export const PACKAGESPRICING = [
       "Flexible scheduling",
       "No recurring commitment",
     ],
-    standard: "€50/hour",
+    // standard: "€50/hour",
     price: "€65/hour · 4-hour minimum",
     featured: false,
     bookingUrl:

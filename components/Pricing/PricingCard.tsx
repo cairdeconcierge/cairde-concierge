@@ -69,12 +69,12 @@ export default function PricingCard() {
                     </div>
 
                     <div className="mt-auto pt-6">
-                      <p className="font-body text-[13px] leading-[140%] text-[#5E6872]">
+                      {/* <p className="font-body text-[13px] leading-[140%] text-[#5E6872]">
                         Standard: {pkg.standard}
-                      </p>
+                      </p> */}
 
                       <p className="mt-1 font-body text-[17px] font-semibold leading-[140%] text-[#1C2A38] md:text-[18px]">
-                        {pkg.price}
+                        Standard: {pkg.price}
                       </p>
 
                       {/* Book Now Button */}

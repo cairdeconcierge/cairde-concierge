@@ -1,3 +1,4 @@
+
 "use client";
 
 import { navLinks } from "@/utils/contents/HomePage.content";
@@ -20,7 +21,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Prevent page scrolling when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "";
 
@@ -28,6 +28,8 @@ export default function Header() {
       document.body.style.overflow = "";
     };
   }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header
@@ -37,49 +39,53 @@ export default function Header() {
           : "border-b-[0.5px] border-transparent"
       }`}
     >
-      <div className="container mx-auto h-full px-5 lg:px-4">
-        {/* ================= DESKTOP ================= */}
-        <div className="hidden h-full py-[29px] lg:grid lg:grid-cols-2">
-          {/* Navigation */}
+      <div className="container mx-auto h-full px-5 lg:px-6 xl:px-6">
+
+        {/* DESKTOP NAVIGATION: XL AND ABOVE */}
+        <div className="hidden h-full py-[29px] xl:grid xl:grid-cols-2">
+
           <nav className="flex items-center">
             <ul className="my-auto flex items-center gap-6 font-body text-[16px] font-normal">
-              {navLinks?.map((l, i) => (
-                <li key={i}>
+              {navLinks?.map((link, index) => (
+                <li key={index}>
                   <Link
-                    href={l.router}
+                    href={link.router}
                     className="transition-opacity hover:opacity-70"
                   >
-                    {l.title}
+                    {link.title}
                   </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          {/* Logo + Button */}
           <div className="flex flex-1 items-center justify-between">
             <Logo />
 
-            <Link href="https://tidycal.com/cairdeconcierege/15-minute-meeting">
-              <Button style="danger" type="button" css="w-[146px] h-[50px]">
+            <Link href="https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100642574">
+              <Button
+                style="danger"
+                type="button"
+                css="w-[146px] h-[50px]"
+              >
                 Book a Consultation
               </Button>
             </Link>
           </div>
         </div>
 
-        {/* ================= MOBILE ================= */}
-        <div className="flex h-full items-center justify-between lg:hidden">
-          {/* Logo */}
+        {/* MOBILE / TABLET HEADER: BELOW XL */}
+        <div className="flex h-full items-center justify-between xl:hidden">
+
           <Logo />
 
-          {/* Hamburger */}
           <button
             type="button"
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen((prev) => !prev)}
             className="flex h-11 w-11 items-center justify-center"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
           >
             <div className="flex w-6 flex-col gap-[5px]">
               <span
@@ -104,33 +110,43 @@ export default function Header() {
         </div>
       </div>
 
-      {/* ================= MOBILE MENU ================= */}
+      {/* MOBILE DROPDOWN MENU: BELOW XL */}
       <div
-        className={`fixed left-0 right-0 top-[99px] bottom-0 bg-white transition-all duration-300 lg:hidden ${
+        id="mobile-navigation"
+        aria-hidden={!menuOpen}
+        className={`fixed bottom-0 left-0 right-0 top-[99px] z-40 bg-white transition-all duration-300 xl:hidden ${
           menuOpen
             ? "visible translate-y-0 opacity-100"
-            : "invisible -translate-y-5 opacity-0"
+            : "invisible -translate-y-5 opacity-0 pointer-events-none"
         }`}
       >
         <nav className="container mx-auto px-5 py-10">
           <ul className="flex flex-col gap-7 font-body text-[20px]">
-            {navLinks?.map((l, i) => (
-              <li key={i}>
+            {navLinks?.map((link, index) => (
+              <li key={index}>
                 <Link
-                  href={l.router}
-                  onClick={() => setMenuOpen(false)}
-                  className="block"
+                  href={link.router}
+                  onClick={closeMenu}
+                  tabIndex={menuOpen ? 0 : -1}
+                  className="block transition-opacity hover:opacity-70"
                 >
-                  {l.title}
+                  {link.title}
                 </Link>
               </li>
             ))}
           </ul>
 
           <div className="mt-10">
-            {/* <Link href="https://tidycal.com/cairdeconcierege/15-minute-meeting"> */}
-            <Link href="https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100642574">
-              <Button style="danger" type="button" css="h-[52px] w-full">
+            <Link
+              href="https://app.acuityscheduling.com/schedule.php?owner=40896029&appointmentType=100642574"
+              onClick={closeMenu}
+              tabIndex={menuOpen ? 0 : -1}
+            >
+              <Button
+                style="danger"
+                type="button"
+                css="h-[52px] w-full"
+              >
                 Book a Consultation
               </Button>
             </Link>
